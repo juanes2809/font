@@ -1,0 +1,237 @@
+:root{
+--main-color: #0e3bcf;
+--secondary-color: #4063d8;
+}
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(195, 196, 196, 0.421);
+}
+header {
+    background-color: #0e3bcf;
+    padding: 20px 0; /* Espaciado interno para separar el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Efecto de sombra para resaltar */
+    width: 95%;
+    height: 45px;
+    margin-left: 35px;
+}
+
+header h1{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 40px; /* Tamaño del texto */
+    margin: 0;
+}
+
+
+main{
+    padding: 1% 1%;
+    display: flex;
+}
+.mapa{
+    width: 36%;
+    margin-left: 10%;
+}
+
+
+.mapa path{
+    fill: #009620;
+    stroke: rgb(34, 34, 34);
+    stroke-width: 1px;
+}
+.mapa path:hover{
+    fill-opacity: 0.6 ;
+    cursor: pointer;
+}
+
+
+
+
+.form-container {
+    width: 300px;
+    margin: 10px 15%;
+    font-family: Arial, sans-serif;
+}
+
+fieldset {
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+legend {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
+/* Estilo para las opciones de radio */
+.radio-option {
+    display: block;
+    margin-bottom: 10px; /* Espaciado entre opciones */
+    background-color: var(--main-color);
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px var(--secondary-color);
+    transition: 0.4s;
+}
+.radio-option:hover{
+    transform: translateX(2px);
+    transition: 0.4s;
+}
+
+/* Estilo para las etiquetas de radio */
+.radio-option label {
+    color: white; /* Color de texto */
+}
+
+
+/* Estilo para los radio buttons */
+.radio-option input[type="radio"] {
+    vertical-align: middle; /* Alinear verticalmente con la etiqueta */
+}
+
+label {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.hidden-list {
+    display: none;
+}
+
+#open-new-tab {
+    background-color: var(--main-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#open-new-tab:hover {
+    background-color: var(--secondary-color);
+}
+
+
+
+
+select[name="municipio"] {
+    background-color: #009688;
+    color: white;
+    font-size: 16px; /* Tamaño de fuente aumentado en 2px */
+    padding: 8px; /* Espaciado interno */
+    border: none;
+    border-radius: 4px;
+    width: 100%; /* Ancho del drop-down list al 100% del contenedor */
+}
+
+
+#municipio {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+select[name="candidato"], select[name="candidatoIrregular"] {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 16px; /* Tamaño de fuente aumentado en 2px */
+    padding: 8px; /* Espaciado interno */
+    border: none;
+    border-radius: 4px;
+    width: 100%; /* Ancho del drop-down list al 100% del contenedor */
+}
+
+/* Estilo para el drop list de candidatos */
+#candidato , #candidatoIrregular{
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.loading-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+}
+
+.dots {
+    display: flex;
+    width: 60px !important; 
+    height: 20px !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots > div{
+    box-sizing: content-box; 
+    width: 15px !important; 
+    height: 15px !important;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: #000000;
+    animation: loading-animation 3s infinite;  /* Adjusted the animation duration to 3s for a slower effect */
+}
+
+.dots > div:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.dots > div:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes loading-animation {
+    0%, 100% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+
+
+#slider-container {
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    text-align: center;
+}
+
+
+#year-slider {
+    width: 10%;
+    -webkit-appearance: none; /* For Chrome */
+    appearance: none;
+    height: 10px;
+    background: var(--main-color);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+}
+#year-slider:hover {
+    opacity: 1;
+}
+#year-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* For Chrome */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
